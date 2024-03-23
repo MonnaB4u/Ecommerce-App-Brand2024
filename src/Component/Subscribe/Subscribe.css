@@ -1,0 +1,30 @@
+.subsHead{
+/* border: 1px solid gray; */
+background: rgb(220, 219, 219);
+margin: 1rem 0rem;
+padding: 1rem;
+height: 30vh;
+
+}
+.subsText{
+    margin-top: 25px;
+    text-align: center;
+}
+.subsTextSearch{
+    margin: .5rem;
+}
+.subsTextSearch input{
+    padding: .4rem;
+    width: 17rem;
+    margin: 0 .3rem;
+    border: none;
+    border-radius: .2rem;
+    box-shadow: 6px 0px 15px 0px rgb(215, 210, 210);
+}
+.subsTextSearch button{
+    padding: .4rem;
+    background: #127FFF;
+    color: aliceblue;
+    border-radius: .2rem;
+    border: none;
+}

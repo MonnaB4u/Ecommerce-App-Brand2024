@@ -1,0 +1,258 @@
+nav {
+    font-size: 1.2rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.NavHead {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.neavlowerhead {
+    /* border: .5px solid gray; */
+    box-shadow: 0px 0px 1px 0.5px gray;
+}
+
+.navIcon {
+    padding: 0 1rem;
+    text-align: center;
+    color: gray;
+    cursor: pointer;
+}
+
+.nav1icon {
+    display: flex;
+    position: relative;
+}
+
+.NavInput {
+    border: 3px solid #0D6EFD;
+    padding: 0.6rem;
+    width: 24rem;
+    border-right: 3px solid #0D6EFD;
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+.NavInput2 {
+    display: none;
+
+}
+
+.inputDropDown {
+    border: 3px solid #0D6EFD;
+    /* padding: 0.5rem 0.6rem; */
+    padding: 0.6rem;
+    width: 10rem;
+    border-left: none;
+    border-top: 3px solid #0D6EFD;
+    cursor: pointer;
+}
+
+.inputButton {
+    border: 3px solid #0D6EFD;
+    padding: 0.6rem;
+    width: 7rem;
+    background: #0D6EFD;
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
+    color: white;
+}
+
+.nav2list {
+    padding: 0 1.5rem;
+    cursor: pointer;
+    padding: .4rem;
+    margin: 0rem .5rem;
+    font-size: 1.2rem;
+}
+
+.nav2Dropdownprimary {
+    border: none;
+    padding: 0.5rem 0.6rem;
+    border-left: none;
+    cursor: pointer;
+}
+
+.nav2Dropdown {
+    border: none;
+    padding: 0.5rem 0.6rem;
+    width: 10rem;
+    border-left: none;
+    cursor: pointer;
+}
+
+.flagb {
+    border: 1px solid;
+    height: 100vh;
+    width: 100%;
+}
+
+#menu-icon {
+    display: none;
+    position: relative;
+}
+
+.nav1icon2 {
+    display: none;
+
+}
+
+/* Search bar */
+
+#myInput {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.navlowerListextra {
+    display: none;
+}
+
+.myCart {
+    position: absolute;
+    right: 10px;
+    transform: translateY(-45%);
+    font-weight: bolder;
+    font-size: .9rem;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background: gray;
+    width: 7%;
+
+}
+
+@media (max-width:992px) {
+    
+    .NavHead {
+        border: none;
+    }
+
+    .neavlowerhead {
+       display: none;
+    }
+
+    .flex-space-around {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    #menu-icon {
+        display: block;
+        text-align: center;
+        margin: 1rem 0rem;
+        cursor: pointer;
+        font-size: .7rem;
+        margin: .5rem .5rem;
+    }
+
+    .navlogo {
+        width: 5rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .inputDropDown {
+        display: none;
+    }
+
+    .NavInput {
+        display: none;
+    }
+
+    .inputButton {
+        display: none;
+    }
+
+    .nav1icon {
+        display: none;
+    }
+
+    .nav1icon2 {
+        display: block;
+    }
+
+    .NavHead {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+        margin-top: 0rem;
+    }
+
+    .flex-center {
+        justify-content: start;
+
+        width: 90%;
+    }
+
+    #menuIconflex {
+        display: flex;
+        justify-content: end;
+        font-size: .7rem;
+    }
+
+
+    .NavInput2 {
+        display: block;
+        border: 3px solid gray;
+        padding: 0.5rem 0.6rem;
+        width: 28rem;
+        cursor: pointer;
+    }
+
+
+    .navLowerlist {
+        display: none;
+    }
+
+    .nav2Dropdownprimary {
+        font-size: .5rem;
+        font-weight: bolder;
+    }
+
+    .nav2list2 {
+        display: none;
+    }
+
+    .navlowerListextra {
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav2listextra a {
+        color: #0D6EFD;
+        border: 1px solid gray;
+        padding: .4rem;
+        margin: 0rem .5rem;
+        background: rgb(215, 213, 213);
+        font-size: .9rem;
+    }
+
+}
+
+@media (max-width:768px) {}
+
+@media (max-width:600px) {}

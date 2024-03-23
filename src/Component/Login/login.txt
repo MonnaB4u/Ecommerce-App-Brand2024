@@ -1,0 +1,31 @@
+ const [userEmail, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('');
+    const [isRegistered, setIsRegistered] = useState(false);
+
+    const handleRegister = () => {
+        localStorage.setItem("register", JSON.stringify({ userEmail, username, password }));
+        setIsRegistered(true);
+        alert('Registration successful! You can now log in.');
+    };
+
+  
+    
+    const handleLogin = () => {
+        const storedUser = localStorage.getItem("register");
+        if (storedUser) {
+            const { username: storedUsername, password: storedPassword } = JSON.parse(storedUser);       
+            if (username === storedUsername && password === storedPassword) {
+                onLogin(username);
+            } else {
+                alert('Invalid username or password');
+            }
+        } else {
+            alert('User not found');
+        }
+    };
+
+    const handleLogout = () => {
+        localStorage.removeItem('isLoggedIn');
+        setIsLoggedIn(false);
+    };

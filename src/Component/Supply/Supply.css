@@ -1,0 +1,42 @@
+.supplyHead {
+    margin: 1rem 6rem;
+}
+
+.supplyCard img {
+    width: 2.5rem;
+    margin: 0 .5rem;
+}
+
+.supplyCard {
+    display: flex;
+    align-items: center;
+    
+}
+.supplyCard{
+    color: gray;
+}
+.supplyGrid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 2fr));
+    gap: 1rem;
+}
+@media (max-width:992px) {
+    .supplyHead {
+        margin:0px;
+    }
+    .supplyCard p,small{
+        color: gray;
+        font-size: .8rem;
+    }
+    .supplyGrid {
+        /* display: grid; */
+        grid-template-columns: repeat(3, minmax(0, 2fr));
+        gap: 1rem;
+    }
+   
+   
+}
+
+@media (max-width:768px) {}
+
+@media (max-width:600px) {}

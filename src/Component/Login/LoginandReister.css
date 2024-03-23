@@ -1,0 +1,118 @@
+.bg {
+    /* background-color:#153493;
+    position: relative; */
+
+
+}
+
+.loginHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: #153493; */
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+    background: url(../../Photos/BG.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+
+}
+
+.loginform {
+    width: 450px;
+    gap: 2rem;
+    border: 1px solid white;
+    background: #153493;
+    color: white;
+    padding: 20px;
+
+    text-align: center;
+}
+
+
+.inputbx {
+    width: 100%;
+    height: 45px;
+
+    margin: 30px 0;
+    position: relative;
+    color: white;
+    border: 1px solid white;
+
+}
+
+.inputbx input {
+    width: 100%;
+    height: 100%;
+    background: none;
+    resize: none;
+    color: aliceblue;
+    border-radius: 5px;
+    padding-left: 2.9rem;
+    border-radius: .2rem;
+}
+
+.inputbx input::placeholder {
+    color: wheat;
+
+}
+
+.inputbx i {
+    position: absolute;
+    left: 15px;
+    top: .6rem;
+}
+
+.loginbtn {
+    padding: .5rem;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: .2rem;
+}
+
+.logincheck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5rem;
+}
+
+/* .loginform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+    gap: 1rem;
+    width: 40%;
+    padding: 20px;
+    margin-top: 3rem;
+}
+
+.logForm {
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.logForm input {
+    padding: .5rem;
+    width: 150%;
+    background: none;
+    resize: none;
+    margin: 0.5rem .0rem;
+    border: 1px solid white;
+    color: aliceblue;
+}
+.loginbtn{
+    padding: .5rem;
+    width: 150%;
+    margin-top: 2rem;
+}
+.logincheck{
+    display: flex;
+    align-items: end;
+    font-size: .5rem;
+} */

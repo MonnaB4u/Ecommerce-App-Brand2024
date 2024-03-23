@@ -1,0 +1,75 @@
+.CartHead {
+    margin: 1rem 6rem;
+}
+
+.CartHead h2 {
+    color: gray;
+    padding: 1rem 0;
+}
+
+.cardHeadFlex {
+    display: flex;
+
+}
+.cardHeadFlexImg img{
+    width: 50%;
+}
+
+.cartflex {
+    display: flex;
+
+}
+
+.cartflex1 {
+    flex: 2.5;
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0px 0px 2px 1px rgb(216, 213, 213);
+    transition: all 0.3s;
+}
+
+.cartflex2 {
+    flex: 1;
+    margin: 0 .5rem;
+}
+
+.cartflex2Card1 {
+    position: relative;
+
+    padding: 0.5rem;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0px 0px 2px 1px rgb(216, 213, 213);
+    transition: all 0.3s;
+}
+
+@media (max-width:992px) {
+    .CartHead{
+        margin: 0;
+    }
+    .cartflex{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .cartflex1{
+        font-size: .8rem;
+    }
+    .cardHeadFlexbtn{
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .cardHeadFlexbtn button{
+        margin: 0;
+        padding: 0;
+    }
+    .cartDis{
+        display: none;
+    }
+}
+
+@media (max-width:768px) {}
+
+@media (max-width:600px) {}
