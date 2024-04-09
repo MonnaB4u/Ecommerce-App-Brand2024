@@ -6,7 +6,13 @@ const recoData = [
     "price": 19.99,
     "cheta1": "color,for men",
     "cheta2": "value2",
-    comment: [] ,// Add your comment here
+    comment: [
+      { user: "fashionista", text: "Love the variety of colors available!" },
+      { user: "shopaholic", text: "Great value for stylish t-shirts!" },
+      { user: "casualwear", text: "Perfect for everyday wear!" },
+      { user: "comfortlover", text: "Soft and comfortable material!" },
+      { user: "stylishguy", text: "Awesome addition to my wardrobe!" }
+    ]
   },
   {
     "id": "0002",
@@ -15,7 +21,13 @@ const recoData = [
     "price": 29.99,
     "cheta1": "blue color",
     "cheta2": "value2",
-    comment: [], // Add your comment here
+    comment: [
+      { user: "summerlover", text: "Perfect for summer outings!" },
+      { user: "beachbum", text: "Comfortable and stylish beachwear!" },
+      { user: "fashionforward", text: "Great fit and quality material!" },
+      { user: "casualwear", text: "Ideal for casual days out!" },
+      { user: "jeansfanatic", text: "Love the denim fabric and design!" }
+    ]
   },
   {
     "id": "0003",
@@ -24,7 +36,13 @@ const recoData = [
     "price": 39.99,
     "cheta1": "medium size",
     "cheta2": "value2",
-    comment: [] ,// Add your comment here
+    comment: [
+      { user: "winterlover", text: "Keeps me warm and cozy during winter!" },
+      { user: "fashionista", text: "Stylish coat for cold weather!" },
+      { user: "outdooradventurer", text: "Great for outdoor activities in winter!" },
+      { user: "qualityconscious", text: "Excellent quality and craftsmanship!" },
+      { user: "stylishguy", text: "Love the color and fit of this coat!" }
+    ]
   },
   {
     "id": "0004",
@@ -33,7 +51,13 @@ const recoData = [
     "price": 24.99,
     "cheta1": "for men",
     "cheta2": "value2",
-    comment: [], // Add your comment here
+    comment: [
+      { user: "traveler", text: "Spacious bag for all my travel essentials!" },
+      { user: "adventurer", text: "Durable and reliable for all my adventures!" },
+      { user: "stylishtraveler", text: "Looks stylish and functional for travel!" },
+      { user: "organizer", text: "Great compartments for organization!" },
+      { user: "frequentflyer", text: "Perfect carry-on bag for flights!" }
+    ]
   },
   {
     "id": "0005",
@@ -42,7 +66,13 @@ const recoData = [
     "price": 49.99,
     "cheta1": "",
     "cheta2": "value2",
-    comment: [], // Add your comment here
+    comment: [
+      { user: "leatherlover", text: "High-quality leather wallet with a classy look!" },
+      { user: "stylishguy", text: "Perfect accessory for a sophisticated look!" },
+      { user: "durabilityconscious", text: "Durable construction for long-lasting use!" },
+      { user: "organized", text: "Keeps my cards and cash organized!" },
+      { user: "fashionforward", text: "Matches well with any outfit!" }
+    ]
   },
   {
     "id": "0006",
@@ -51,7 +81,13 @@ const recoData = [
     "price": 14.99,
     "cheta1": "Color available",
     "cheta2": "value2",
-    comment: [], // Add your comment here
+    comment: [
+      { user: "jeanslover", text: "Classic jeans pant with a comfortable fit!" },
+      { user: "casualstyle", text: "Great for casual everyday wear!" },
+      { user: "fashionable", text: "Versatile pant that goes well with any top!" },
+      { user: "comfortlover", text: "Soft denim fabric for all-day comfort!" },
+      { user: "styleconscious", text: "Love the style and affordability of these jeans!" }
+    ]
   },
   {
     "id": "0007",
@@ -60,7 +96,13 @@ const recoData = [
     "price": 12.99,
     "cheta1": "with mic",
     "cheta2": "value2",
-    comment: [], // Add your comment here
+    comment: [
+      { user: "gamer", text: "Great sound quality for gaming sessions!" },
+      { user: "comfortgamer", text: "Comfortable to wear for long gaming sessions!" },
+      { user: "competitivegamer", text: "Enhances my gaming experience with clear audio!" },
+      { user: "multitasker", text: "Perfect for gaming and video calls with the mic!" },
+      { user: "valueconscious", text: "Affordable headset with good performance!" }
+    ]
   },
   {
     "id": "0008",
@@ -69,7 +111,13 @@ const recoData = [
     "price": 24.99,
     "cheta1": "",
     "cheta2": "value2",
-    comment: [], // Add your comment here
+    comment: [
+      { user: "traveler", text: "Spacious bag for all my travel essentials!" },
+      { user: "adventurer", text: "Durable and reliable for all my adventures!" },
+      { user: "stylishtraveler", text: "Looks stylish and functional for travel!" },
+      { user: "organizer", text: "Great compartments for organization!" },
+      { user: "frequentflyer", text: "Perfect carry-on bag for flights!" }
+    ]
   },
   {
     "id": "0009",
@@ -78,7 +126,13 @@ const recoData = [
     "price": 29.99,
     "cheta1": "Only 4 left",
     "cheta2": "value2",
-    comment: [], // Add your comment here
+    comment: [
+      { user: "naturelover", text: "Perfect for outdoor adventures and camping trips!" },
+      { user: "hiker", text: "Lightweight and portable for hikes!" },
+      { user: "environmentalist", text: "Reusable alternative to single-use plastic bottles!" },
+      { user: "outdoorenthusiast", text: "Convenient way to stay hydrated on the go!" },
+      { user: "waterlover", text: "Great capacity for carrying water during workouts!" }
+    ]
   },
   {
     "id": "0010",
@@ -87,7 +141,13 @@ const recoData = [
     "price": 34.99,
     "cheta1": "",
     "cheta2": "value2",
-    comment: [], // Add your comment here
+    comment: [
+      { user: "gardener", text: "Perfect for planting herbs and small plants!" },
+      { user: "plantlover", text: "Ideal for indoor gardening and decorating!" },
+      { user: "greenthumb", text: "Durable pot for nurturing plant growth!" },
+      { user: "environmentalist", text: "Eco-friendly option for planting!" },
+      { user: "natureenthusiast", text: "Love the natural look and feel of these pots!" }
+    ]
   }
 ];
 
