@@ -11,6 +11,7 @@ import ProductDetail from './Component/ProductDetails/ProductDetail';
 import MyCart from './Component2/MyCart/MyCart';
 import CheckOut from './Component2/CheckOut/CheckOut';
 import PrivateRoute from './Component/Login/PrivateRoute';
+import Orders from './Component2/Orders/Orders';
 
 export const UserContext = createContext();
 
@@ -18,7 +19,7 @@ function App() {
   const [order, setOrder] = useState([])
   const [orderJason, setOrderJason] = useState([])
   const [loggedInUser, setLoggedInUser] = useState([]);
-  console.log("from App",loggedInUser);
+  // console.log("from App",loggedInUser);
 
   return (
 
@@ -29,7 +30,7 @@ function App() {
             <Route path="/" element={<Allcomponent />} />
             <Route path='/login' element={<LoginandReister />} />
             <Route path='/searchAllcheta' element={<SearchAllcheta />} />
-
+            <Route path='/myorders' element={<Orders />} />
             <Route element={<PrivateRoute />}>
               <Route path='/productDetails/:id' element={<ProductDetail />} />
               <Route path='/myCart' element={<MyCart setOrder={setOrder} setOrderJason={setOrderJason} />} />

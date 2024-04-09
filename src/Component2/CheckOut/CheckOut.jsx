@@ -51,20 +51,37 @@ const CheckOut = (props) => {
 
     const getChekoutData = () => {
 
-        if (loggedInUser.name !=="" && order.length !== 0) {
-            setOrderConf({
-                "name": loggedInUser.username,
-                "email": loggedInUser.userEmail,
-                "address": address,
-                "city": city,
-                "bankName": bankName,
-                "cardNumber": cardNumber,
-                "onderConf": onderConf,
-                "tax": order[0].tax,
-                "shipping": order[0].shipping,
-                "total": order[0].total,
-                "grandTotal": order[0].grandTotalWithTax
-            })
+        if (loggedInUser.name !== "" && order.length !== 0) {
+           
+            try {
+                const orderConfirmation ={
+                    "name": loggedInUser.username,
+                    "email": loggedInUser.userEmail,
+                    "address": address,
+                    "city": city,
+                    "bankName": bankName,
+                    "cardNumber": cardNumber,
+                    "onderConf": onderConf,
+                    "tax": order[0].tax,
+                    "shipping": order[0].shipping,
+                    "total": order[0].total,
+                    "grandTotal": order[0].grandTotalWithTax
+                }
+
+                const existingOrders = JSON.parse(localStorage.getItem('orders')) || [];
+                existingOrders.push(orderConfirmation);
+                localStorage.setItem('orders', JSON.stringify(existingOrders));
+                console.log('Order added to orders successfully');
+
+                setOrderConf(orderConfirmation);
+               
+               
+            } catch (error) {
+                console.error('Error storing data:', error);
+            }
+
+
+
         } else {
             alert("check login and you order")
             navigate('/')
@@ -73,7 +90,16 @@ const CheckOut = (props) => {
     }
 
 
-    console.log(onderConf);
+    const clickAdd = (item) => {
+        try {
+            const existingCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            existingCartItems.push(item);
+            localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
+            console.log('Item added to cart successfully');
+        } catch (error) {
+            console.error('Error storing data:', error);
+        }
+    }
 
     return (
         <div>
@@ -159,7 +185,7 @@ const CheckOut = (props) => {
                             <div className="" style={{ marginTop: "1rem" }}>
                                 <label htmlFor="">CVV</label> <br />
                                 <input type="text" placeholder='your city (optional)' />
-                            </div>
+                            </div> 
                         </div>
                         <div className="coBtn">
                             <button onClick={getChekoutData} className=''>Continue to Checkout</button>

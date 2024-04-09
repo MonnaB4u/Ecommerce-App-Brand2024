@@ -15,7 +15,6 @@ const NavUpper = () => {
 
 
     const [loggedInUser, setLoggedInUser] = useState(null);
-
     useEffect(() => {
         const storedUser = localStorage.getItem("register");
         if (storedUser) {
@@ -64,7 +63,7 @@ const NavUpper = () => {
                 <ul className='nav1icon'>
                     <li className='navIcon'><FontAwesomeIcon icon={faUser} className="fa-1x fas" /> <h6>{loggedInUser ? loggedInUser : "User"}</h6> </li>
                     <li className='navIcon'><FontAwesomeIcon icon={faCommentDots} className="fa-1x fas" /><h6>Message</h6> </li>
-                    <li className='navIcon'><FontAwesomeIcon icon={faHeart} className="fa-1x fas" /><h6>Orders</h6></li>
+                    <li  className='navIcon'><FontAwesomeIcon icon={faHeart} className="fa-1x fas" /><h6>Orders</h6></li>
                     <li onClick={() => navigate("/myCart")} className='navIcon'>{cartItems.length === 0 ? (<i className='myCart' style={{ color: "white" }}>0</i>) : <i className='myCart' style={{ color: "white" }}>{cartItems.length} </i>}  <FontAwesomeIcon icon={faCartShopping} className="fa-1x fas" />  <h6>My Cart</h6></li>
                 </ul>
 

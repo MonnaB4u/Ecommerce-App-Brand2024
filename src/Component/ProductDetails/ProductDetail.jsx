@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from './../Navbar/Navbar';
 import './ProductDetail.css'
 
-import homeData from '../HomeAndOutdoor/HomeData';
+
 import avatar from '../../Photos/Avatar.png'
 
 import { useParams } from 'react-router-dom';
@@ -19,38 +19,40 @@ import Footer from './../Footer/Footer';
 import Discount from './Discount';
 import Offer from '../OffersAndDeals/Offer';
 import recoData from '../Recommend/RecoData';
+import homeData from '../HomeAndOutdoor/HomeData';
 
 
 
 
 const ProductDetail = () => {
 
-    const [data, setData] = useState([...homeData, ...Offer,...recoData])
-    
-
-    let { id } = useParams()
-    const foundData = data.find(data => data.id === id)
-
-    const clickAdd = (e) => {
-        try {
-            const existingCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            existingCartItems.push(e);
-            localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
-
-            console.log('Item added to cart successfully');
-        } catch (error) {
-            console.error('Error storing data:', error);
-        }
-
-    }
-
+    const [data, setData] = useState([...homeData, ...Offer, ...recoData]);
     const [cartItems, setCartItems] = useState([]);
+
     useEffect(() => {
         const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         setCartItems(storedCartItems);
     }, []);
 
-    const findName = cartItems.find(cart => cart.name === foundData.name)
+    const { id } = useParams();
+    const foundData = data.find(item => item.id === id);
+
+    const clickAdd = (item) => {
+        try {
+            const existingCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            existingCartItems.push(item);
+            localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
+            console.log('Item added to cart successfully');
+        } catch (error) {
+            console.error('Error storing data:', error);
+        }
+    }
+
+    const findName = cartItems.find(cart => cart.name === foundData?.name);
+
+    if (!foundData) {
+        return <div>Loading...</div>; // Or handle error state gracefully
+    }
 
     return (
         <div className="">
@@ -68,7 +70,7 @@ const ProductDetail = () => {
                         <h4>{foundData.name}</h4>
 
                         <div className="flex_center pdReview">
-                            
+
                             <div className="star">
                                 <FaRegStar style={{ color: "#FA3434" }} />
                                 <FaRegStar style={{ color: "#FA3434" }} />
@@ -218,7 +220,7 @@ const ProductDetail = () => {
                     </div>
                 </div>
             </div>
-            <ProductDetailsLower />
+            <ProductDetailsLower foundData={foundData} />
             <RelatedProduct />
             <Discount />
             <Footer />
