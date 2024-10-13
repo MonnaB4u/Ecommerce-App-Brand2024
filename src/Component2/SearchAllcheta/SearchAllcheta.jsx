@@ -6,23 +6,32 @@ import data from './Data';
 import group from '../../Photos/Group 989.png'
 import lovebtn from '../../Photos/btn-basic.png'
 import SearchNav from './SearchNav';
+import SearchResult from './SearchResult';
 const SearchAllcheta = () => {
-    const [select, setSelect] = useState([])
+    const [select, setSelect] = useState([]);
+
     const handleBox = (e) => {
         const value = e.target.value;
         const isChecked = select.includes(value);
 
         if (isChecked) {
+            // If the value is already in the array, remove it
             setSelect(select.filter(option => option !== value));
         } else {
+            // If the value is not in the array, add it
             setSelect([...select, value]);
         }
     }
+
     console.log(select);
     return (
         <div>
             <Navbar />
-          
+            <div className="nav">
+                <div className="NavHead">
+
+                </div>
+            </div>
             <div className="searchAllhead">
                 <div className="searchAllflex">
 
@@ -42,108 +51,148 @@ const SearchAllcheta = () => {
 
                         <div className="allCheckbox">
                             <h4>Brand</h4>
-
-                            <form action="">
+                            <div className="checkboxItem">
                                 <input
                                     type="checkbox"
+                                    id="appleCheckbox"
                                     name="options"
                                     value="Apple"
                                     checked={select.includes("Apple")}
                                     onChange={handleBox}
                                 />
-                                <label for="vehicle1"> Apple </label> <br />
+                                <label htmlFor="appleCheckbox"> Apple </label>
+                            </div>
+                            <div className="checkboxItem">
+                                <input
+                                    type="checkbox"
+                                    id="huaweiCheckbox"
+                                    name="options"
+                                    value="Huawei"
+                                    checked={select.includes("Huawei")}
+                                    onChange={handleBox}
+                                />
+                                <label htmlFor="huaweiCheckbox"> Huawei </label>
+                            </div>
 
-                                <input type="checkbox" id="vehicle1" name="options" value="Huawei" checked={select.includes("Huawei")} onChange={handleBox} />
-                                <label for="vehicle2"> Huawei </label> <br />
-                                <input type="checkbox" id="vehicle1" name="options" value="Pocco" checked={select.includes("Pocco")} onChange={handleBox} />
-                                <label for="vehicle3"> Pocco</label> <br />
-                                <input type="checkbox" id="vehicle1" name="options" value="Lenovo" checked={select.includes("Lenovo")} onChange={handleBox} />
-                                <label for="vehicle3"> Lenovo</label> <br />
+                            <div className="checkboxItem">
+                                <input
+                                    type="checkbox"
+                                    id="poccoCheckbox"
+                                    name="options"
+                                    value="Pocco"
+                                    checked={select.includes("Pocco")}
+                                    onChange={handleBox}
+                                />
+                                <label htmlFor="poccoCheckbox"> Pocco </label>
+                            </div>
 
-                            </form>
-
-
-                            {/* <label htmlFor="">  <input type="checkbox" />Samsung </label>
-                                                        <label htmlFor="">  <input type="checkbox" /> Apple</label>
-                                                        <label htmlFor="">  <input type="checkbox" /> Huawei</label>
-                                                        <label htmlFor="">  <input type="checkbox" />Pocco </label>
-                                                        <label htmlFor="">  <input type="checkbox" />Lenovo </label> */}
+                            <div className="checkboxItem">
+                                <input
+                                    type="checkbox"
+                                    id="lenovoCheckbox"
+                                    name="options"
+                                    value="Lenovo"
+                                    checked={select.includes("Lenovo")}
+                                    onChange={handleBox}
+                                />
+                                <label htmlFor="lenovoCheckbox"> Lenovo </label>
+                            </div>
                         </div>
+
+
                         <div className="allCheckbox">
                             <h4>Features</h4>
-                            <form action="">
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Metalic" checked={select.includes("Metalic")} onChange={handleBox} />
-                                <label for="vehicle1"> Metalic </label> <br />
-
-                                <input type="checkbox" id="vehicle2" name="vehicle2" value="PlacticsCover " checked={select.includes("PlacticsCover ")} onChange={handleBox} />
-                                <label for="vehicle2"> Plactics cover </label> <br />
-                                <input type="checkbox" id="vehicle3" name="vehicle3" value="8GBRam" checked={select.includes("8GBRam")} onChange={handleBox} />
-                                <label for="vehicle3"> 8GB Ram</label> <br />
-
-                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Superpower" checked={select.includes("Superpower")} onChange={handleBox} />
-                                <label for="vehicle3"> Super power</label> <br />
-
-
-                            </form>
+                            <div className="checkboxItem">
+                                <input
+                                    type="checkbox"
+                                    id="metallicCheckbox"
+                                    name="features"
+                                    value="Metallic"
+                                    checked={select.includes("Metallic")}
+                                    onChange={handleBox}
+                                />
+                                <label htmlFor="metallicCheckbox"> Metallic </label>
+                            </div>
+                            <div className="checkboxItem">
+                                <input
+                                    type="checkbox"
+                                    id="plasticCoverCheckbox"
+                                    name="features"
+                                    value="PlasticCover"
+                                    checked={select.includes("PlasticCover")}
+                                    onChange={handleBox}
+                                />
+                                <label htmlFor="plasticCoverCheckbox"> Plastic Cover </label>
+                            </div>
+                            <div className="checkboxItem">
+                                <input
+                                    type="checkbox"
+                                    id="ramCheckbox"
+                                    name="features"
+                                    value="8GBRam"
+                                    checked={select.includes("8GBRam")}
+                                    onChange={handleBox}
+                                />
+                                <label htmlFor="ramCheckbox"> 8GB Ram </label>
+                            </div>
+                            <div className="checkboxItem">
+                                <input
+                                    type="checkbox"
+                                    id="superPowerCheckbox"
+                                    name="features"
+                                    value="Superpower"
+                                    checked={select.includes("Superpower")}
+                                    onChange={handleBox}
+                                />
+                                <label htmlFor="superPowerCheckbox"> Super Power </label>
+                            </div>
                         </div>
 
                         <div className="allCheckbox">
                             <h4>Price range</h4>
-                            <form action="">
-
-                                <div className="priceRange">
-                                    <div className="">
-                                        <label for="vehicle3"> Min</label> <br />
-                                        <input type="number" id="vehicle3" name="vehicle3" value="0" />
-                                    </div>
-
-                                    <div className="">
-                                        <label for="vehicle3"> Min</label> <br />
-                                        <input type="number" id="vehicle3" name="vehicle3" value="0" />
-                                    </div>
+                            <div className="priceRange">
+                                <div className="minPrice">
+                                    <label htmlFor="minPriceInput">Min</label> <br />
+                                    <input type="number" id="minPriceInput" name="minPrice" defaultValue="0" />
                                 </div>
-                                <button>Apply</button>
-                            </form>
-
+                                <div className="maxPrice">
+                                    <label htmlFor="maxPriceInput">Max</label> <br />
+                                    <input type="number" id="maxPriceInput" name="maxPrice" defaultValue="0" />
+                                </div>
+                            </div>
+                            <button>Apply</button>
                         </div>
+
+
                         <div className="allCheckbox">
                             <h4>Condition</h4>
-                            <form action="">
-                                <input type="radio" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label for="vehicle1"> Any </label> <br />
-
-                                <input type="radio" id="vehicle2" name="vehicle2" value="Car" />
-                                <label for="vehicle2"> Refurbished </label> <br />
-                                <input type="radio" id="vehicle3" name="vehicle3" value="Boat" />
-                                <label for="vehicle3"> Brand new</label> <br />
-
-                                <input type="radio" id="vehicle3" name="vehicle3" value="Boat" />
-                                <label for="vehicle3"> Old items</label> <br />
-
-                            </form>
+                            <div className="conditionOptions">
+                                <div>
+                                    <input type="radio" id="anyCondition" name="condition" value="Any" />
+                                    <label htmlFor="anyCondition"> Any </label> <br />
+                                </div>
+                                <div>
+                                    <input type="radio" id="refurbishedCondition" name="condition" value="Refurbished" />
+                                    <label htmlFor="refurbishedCondition"> Refurbished </label> <br />
+                                </div>
+                                <div>
+                                    <input type="radio" id="brandNewCondition" name="condition" value="Brand New" />
+                                    <label htmlFor="brandNewCondition"> Brand new </label> <br />
+                                </div>
+                                <div>
+                                    <input type="radio" id="oldItemsCondition" name="condition" value="Old Items" />
+                                    <label htmlFor="oldItemsCondition"> Old items </label> <br />
+                                </div>
+                            </div>
                         </div>
-
-                        {/* <div className="">
-                            <h4>Rating</h4>
-                            <form action="">
-                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-                                <label for="vehicle1"> Apple </label> <br />
-
-                                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
-                                <label for="vehicle2"> Huawei </label> <br />
-                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-                                <label for="vehicle3"> Pocco</label> <br />
-
-                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-                                <label for="vehicle3"> Lenovo</label> <br />
-
-                            </form>
-                        </div> */}
 
                     </div>
 
                     <div className="searchAllflex2">
-                    <SearchNav />
+                        {
+                            select.length !== 0 && <SearchResult select={select} handleBox={handleBox} />
+                        }
+                        <SearchNav />
                         <div className="searchallrid">
                             {
                                 data.map((each, i) =>
@@ -160,33 +209,21 @@ const SearchAllcheta = () => {
                                                 <p>{each.dis}</p>
                                             </div>
                                         </div>
-
                                     </>
-
-
                                 )
                             }
                         </div>
                     </div>
-
                 </div>
             </div>
 
 
 
-            {/* 
-            <Footer/> */}
+
+            <Footer />
         </div>
     );
 };
 
 export default SearchAllcheta;
 
-{/* <select className='searchAllflex1dropDown' name="cars" id="cars">
-                            <option value="volvo">Category</option>
-                            <option value="saab">Mobile accessory</option>  
-                            <option value="opel">Electronics</option>
-                            <option value="audi">Smartphones</option>
-                            <option value="audi">Modern tech</option>
-                          <option value="">  <a href="">See all</a></option>
-                        </select> */}

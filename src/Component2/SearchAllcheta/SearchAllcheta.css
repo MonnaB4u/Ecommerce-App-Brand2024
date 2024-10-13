@@ -39,6 +39,9 @@
 .allCheckbox {
     padding: .5rem 0;
 }
+.allCheckbox input{
+    cursor: pointer;
+}
 
 .priceRange {
     display: flex;

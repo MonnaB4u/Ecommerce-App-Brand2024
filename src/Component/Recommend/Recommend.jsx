@@ -12,7 +12,7 @@ const Recommend = () => {
                 {
                     recoData.map((each, i) =>
                         <>
-                            <div className="recoCard" onClick={()=> naviate(`productDetails/${each.id}`)}>
+                            <div className="recoCard" onClick={()=> naviate(`productDetails/${each.id}`)} style={{cursor:"pointer"}}>
                                 <img src={each.img} alt="" />
                                 <h4>${each.price}</h4>
                                 <p>{each.name}</p>

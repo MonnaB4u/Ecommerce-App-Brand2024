@@ -84,7 +84,7 @@ const homeData = [
         ]
     },
     {
-        id: '207',
+        id: '210',
         name: "Home appliance",
         img: "https://i.ibb.co/qN46Kjh/rasm.png",
         price: 30,
@@ -96,7 +96,23 @@ const homeData = [
             { user: "householdhero", text: "Makes daily tasks more manageable!" },
             { user: "modernliving", text: "Adds convenience to my daily routine!" }
         ]
-    }
+    },
+    {
+        id: '211',
+        name: "Kitchen mixer",
+        img: "https://i.ibb.co/q7x8BRv/img-88.png",
+        price: 100,
+        comment: [
+            // Add your comment here
+            { user: "bakingqueen", text: "Best investment for my baking hobby!" },
+            { user: "culinarywizard", text: "Makes baking a piece of cake!" },
+            { user: "bakingenthusiast", text: "Whips up batter in no time!" },
+            { user: "homemadebaker", text: "Perfect for making homemade treats!" },
+            { user: "kitchenmagic", text: "Can't imagine baking without this mixer!" }
+        ]
+    },
+
+
 ];
 
 export default homeData;

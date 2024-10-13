@@ -131,8 +131,8 @@ const MyCart = (props) => {
                                                     <p>Size: medium, Color: blue,  Material: Plastic</p>
                                                     <p>Seller: Best factory LLC</p>
                                                     <div className="">
-                                                        <button onClick={() => removeFromCart(each.name)} className='bs' style={{ padding: ".5rem", border: "none", color: "red", fontWeight: "bold" }}>Remove</button>
-                                                        <button className='bs' style={{ margin: ".5rem 1rem", padding: ".5rem", border: "none", color: "#127FFF", fontWeight: "bold" }}>Save for later</button>
+                                                        <button  onClick={() => removeFromCart(each.name)} className='bs' style={{cursor:"pointer", padding: ".5rem", border: "none", color: "red", fontWeight: "bold" }}>Remove</button>
+                                                        <button className='bs' style={{cursor:"pointer", margin: ".5rem 1rem", padding: ".5rem", border: "none", color: "#127FFF", fontWeight: "bold" }}>Save for later</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -140,9 +140,9 @@ const MyCart = (props) => {
                                             <div className="">
                                                 <h5 style={{ margin: ".5rem 1rem", padding: ".5rem" }}>${each.price}</h5>
                                                 <div className="cardHeadFlexbtn">
-                                                    <button onClick={() => handleDeleteCart(each)} className='bs' style={{ margin: "0 .5rem", padding: ".6rem", border: "none", color: "#127FFF", fontWeight: "bold" }}>-</button>
+                                                    <button onClick={() => handleDeleteCart(each)} className='bs' style={{cursor:"pointer", margin: "0 .5rem", padding: ".6rem", border: "none", color: "#127FFF", fontWeight: "bold" }}>-</button>
                                                     {/* <button className='bs' style={{ margin: ".5rem .5rem", padding: ".5rem", border: "none", color: "#127FFF", fontWeight: "bold" }}>{.length}</button> */}
-                                                    <button onClick={() => handleAddCart(each)} className='bs' style={{ margin: "", padding: ".6rem", border: "none", color: "#127FFF", fontWeight: "bold" }}>+</button>
+                                                    <button onClick={() => handleAddCart(each)} className='bs' style={{cursor:"pointer", margin: "", padding: ".6rem", border: "none", color: "#127FFF", fontWeight: "bold" }}>+</button>
 
                                                 </div>
                                             </div>
@@ -188,7 +188,7 @@ const MyCart = (props) => {
                             </div>
 
                             <div className="" style={{ textAlign: "center" }}>
-                                <button onClick={checkoutCart} className='bs' style={{ width: "60%", margin: "", padding: ".6rem", border: "none", background: "#127FFF", fontWeight: "bold", color: "white" }}>Checkout</button>
+                                <button onClick={checkoutCart} className='bs' style={{cursor:"pointer", width: "60%", margin: "", padding: ".6rem", border: "none", background: "#127FFF", fontWeight: "bold", color: "white" }}>Checkout</button>
                             </div>
                             {/* onClick={() => navigate('/checkout')}  */}
                             <div className="flex-center" style={{ margin: ".5rem 0rem" }}>

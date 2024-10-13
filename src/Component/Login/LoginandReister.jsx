@@ -85,20 +85,20 @@ const LoginandReister = () => {
 
                                 <div className='inputbx'>
                                     <i><MdAlternateEmail /></i>
-                                    <input type="text" placeholder='Enter your email' />
+                                    <input type="email" name='email' placeholder='Enter your email' />
                                 </div>
                                 <p>OR</p>
 
                                 <div className='inputbx'>
                                     {/* <i><FaUserLock /></i> */}
                                     <i><FaUser /></i>
-                                    <input type="text" placeholder='Enter your name' value={username} onChange={(e) => setUsername(e.target.value)} />
+                                    <input type="name" name='name' placeholder='Enter your name' value={username} onChange={(e) => setUsername(e.target.value)} />
                                 </div>
 
                                 <div className='inputbx'>
                                     {/* <i><FaUserLock /></i> */}
                                     <i><MdOutlinePassword /></i>
-                                    <input type="number" placeholder='Enter your password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                                    <input type="password" name='password' placeholder='Enter your password' value={password} onChange={(e) => setPassword(e.target.value)} />
                                 </div>
                                 <button onClick={handleLogin} className='loginbtn'>Login</button>
                                 
@@ -122,18 +122,18 @@ const LoginandReister = () => {
                                 <div className='inputbx'>
                                     <i><MdAlternateEmail /></i>
 
-                                    <input type="text" placeholder='Enter your email' value={userEmail} onChange={(e) => setEmail(e.target.value)} />
+                                    <input type="email" name="email" placeholder='Enter your email' value={userEmail} onChange={(e) => setEmail(e.target.value)} />
                                 </div>
 
                                 <div className='inputbx'>
                                     <i><FaUser /></i>
                                     {/* <i><FaUserLock /></i> */}
-                                    <input type="text" placeholder='Enter your name' value={username} onChange={(e) => setUsername(e.target.value)} />
+                                    <input type="name" name='name' placeholder='Enter your name' value={username} onChange={(e) => setUsername(e.target.value)} />
                                 </div>
 
                                 <div className='inputbx'>
                                     <i><MdOutlinePassword /></i>
-                                    <input type="number" placeholder='Enter Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                                    <input type="password" name='password' placeholder='Enter Password' value={password} onChange={(e) => setPassword(e.target.value)} />
                                 </div>
 
                                 <button onClick={handleRegister} className='loginbtn'>Submit</button>

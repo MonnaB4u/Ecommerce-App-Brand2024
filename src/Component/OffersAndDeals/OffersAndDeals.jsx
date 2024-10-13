@@ -22,7 +22,7 @@ const OffersAndDeals = () => {
                     {
                         offerData.map((each, index) =>
                             <>
-                                <div onClick={()=>navigate(`productDetails/${each.id}`)} className="card">
+                                <div onClick={()=>navigate(`productDetails/${each.id}`)} className="card" style={{cursor:"pointer"}}>
                                     <img src={each.img} alt="" />
                                     <p>{each.name}</p>
                                     <small>-{each.discount}</small>
